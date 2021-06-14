@@ -35,8 +35,16 @@ nav.navbar {
 }
 
 body {
+	position: relative;
 	padding-top: 120px;
+	padding-bottom: 48px;
 	min-height: 100%;
+}
+
+body::after {
+	content: '';
+	display: block;
+	height: 164px;
 }
 
 .translucent {
@@ -44,7 +52,9 @@ body {
 }
 
 footer {
-	margin-top: 48px
+	width: 100%;
+	position: absolute;
+ 	bottom: 0;
 }
 
 
