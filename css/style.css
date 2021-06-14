@@ -1,0 +1,55 @@
+svg.nav {
+	background-color: #b5e3fb;
+	padding: 15px;
+	border-color: #111;
+	width: 100%;
+	margin-bottom: 30px;
+	outline-width: 3px;
+	outline-style: dashed;
+	outline-color: #000;
+}
+
+svg g {
+	fill: #ffff84;
+	stroke: #111;
+	stroke-width: 0.6;
+}
+
+svg g:hover {
+	fill: #FFA500;
+	transition: 0.1s;
+	cursor: pointer;
+}
+
+svg g.active {
+	fill: #FFA500;
+}
+
+nav.navbar {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999999;
+	margin-bottom: 30px;
+}
+
+body {
+	padding-top: 96px;
+}
+
+.translucent {
+	opacity: 0.9875;
+}
+
+
+
+
+
+
+
+
+
+
+
+
