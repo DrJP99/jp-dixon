@@ -36,6 +36,7 @@ nav.navbar {
 
 body {
 	padding-top: 120px;
+	min-height: 100%;
 }
 
 .translucent {
