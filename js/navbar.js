@@ -18,17 +18,17 @@ function getPath(){
 
 $(document).ready(function(){
     //file with relative path to index outside html folder
-    $.get(getPath()+"js/navbar.html", function(html_string){
+    $.get("https://jp-dixon.com/js/navbar.html", function(html_string){
         $("#navbar").html(html_string);
         $("#navbar a").each(function() {
 
             var _href = this.getAttribute("href");
             if( typeof(_href) != 'undefined' && _href!="" && _href.search(".html")!=-1){
-                $(this).prop("href", getPath()+_href);
+                $(this).prop("href", "https://jp-dixon.com/js/navbar.html"+_href);
             }
         });
     });
-    $.get(getPath()+"js/footer.html", function(html_string){
+    $.get(getPath()+"/js/footer.html", function(html_string){
         $("#footer-bar").html(html_string);
         $("#footer-bar a").each(function() {
 
