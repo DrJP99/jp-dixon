@@ -78,24 +78,22 @@ a.secret.ninja:hover {
 }
 
 .masthead {
+	background: rgba(0,0,0,0.4) url('/assets/images/home-banner.jpg');
+	background-repeat: no-repeat;
+	margin-top: -35px;
 	margin-bottom: 100px;
-}
-
-.overlay {
-	width: 100%;
-	background-color: #212529;
-	opacity: 0.40;
+	background-size: cover;
+	background-blend-mode: darken;
 }
 
 .site-heading {
-	color: #fff;
 	margin-top: 200px;
 	margin-bottom: 200px;
 	text-align: center;
 }
 
-.site-heading, h1 {
-	font-size: 90px;
+.site-heading h1 {
+	font-size: calc(3.25rem + 0.9vw);
 	color: #fff;
 	font-family: "Georgia";
 	opacity: 1;
