@@ -58,6 +58,48 @@ footer {
  	bottom: 0;
 }
 
+a.secret {
+	color: #fff;
+}
+
+a.secret.ninja {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+a.secret:hover {
+	cursor: default;
+}
+
+a.secret.ninja:hover {
+	cursor: inherit;
+	color: #fff;
+	font-size: 80px;
+}
+
+.masthead {
+	margin-bottom: 100px;
+}
+
+.overlay {
+	width: 100%;
+	background-color: #212529;
+	opacity: 0.40;
+}
+
+.site-heading {
+	color: #fff;
+	margin-top: 200px;
+	margin-bottom: 200px;
+	text-align: center;
+}
+
+.site-heading, h1 {
+	font-size: 90px;
+	color: #fff;
+	font-family: "Georgia";
+	opacity: 1;
+}
 
 
 
