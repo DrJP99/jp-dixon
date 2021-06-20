@@ -1,4 +1,4 @@
-ErrorDocument 404 https://www.jp-dixon.com/not_found.html
+ErrorDocument 404 https://www.jp-dixon.com/404.html
 # mod_rewrite starts here
 
 RewriteEngine on
