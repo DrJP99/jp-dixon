@@ -2,8 +2,9 @@ function clipboardCopy() {
 	var copyText = document.getElementById("email");
 
 	copyText.select();
-	copyText.setSelectionRange(0, 99999)
+	copyText.setSelectionRange(0, 99999);
 
 	document.execCommand("copy");
 
-}
+	console.log(copyText.value);
+};
