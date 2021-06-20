@@ -99,7 +99,10 @@ a.secret.ninja:hover {
 	opacity: 1;
 }
 
-
+input.text-only:read-only {
+	background-color: #f7f7f9;
+	cursor: default;
+}
 
 
 
