@@ -10639,6 +10639,7 @@ fieldset:disabled .btn {
 	font-size: 0.875rem;
 	text-transform: uppercase;
 	font-weight: 600;
+	transition: top 0.3s;
 }
 
 .navbar-nav .nav-link {
