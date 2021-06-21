@@ -16,6 +16,7 @@ function getPath(){
     return res;
 }
 
+//Automatically update navbar and footer
 $(document).ready(function(){
     //file with relative path to index outside html folder
     $.get(getPath()+"/js/navbar.html", function(html_string){
@@ -40,16 +41,19 @@ $(document).ready(function(){
     });
 });
 
+//Collapse navbar when clicking away (phone)
 $(document).ready(function () {
      $(document).click(function (event) {
          var clickover = $(event.target);
+		 console.log(clickover);
          var _opened = $(".navbar-collapse").hasClass("show");
-         if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+         if (_opened === true && (!clickover.hasClass("navbar-toggler") )) {
              $(".navbar-toggler").click();
          }
      });
  });
 
+//Autohide navbar when scrolling
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 	var currentScrollPos = window.pageYOffset;
