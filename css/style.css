@@ -85,7 +85,7 @@ a.secret.ninja:hover {
 .masthead {
 	background: rgba(0,0,0,0.4) url('/assets/images/home-banner.jpg');
 	background-repeat: no-repeat;
-	margin-top: -25px;
+	margin-top: -20px;
 	margin-bottom: 50px;
 	background-size: cover;
 	background-blend-mode: darken;
