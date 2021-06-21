@@ -104,6 +104,15 @@ input.text-only:read-only {
 	cursor: default;
 }
 
+.hash-link::before {
+	display: block;
+	content: " ";
+	margin-top: -100px;
+	height: 100px;
+	visibility: hidden;
+	pointer-events: none;
+}
+
 
 
 
