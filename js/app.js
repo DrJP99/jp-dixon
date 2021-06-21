@@ -7,7 +7,7 @@ function clipboardCopy() {
 
 	try {
 		let successful = document.execCommand('copy');
-		let msg = successful ? 'successful' : 'unsuccessful';
+		let msg = successful ? copyText.value : 'unsuccessful';
 
 		console.log(msg);
 	} catch (e) {
