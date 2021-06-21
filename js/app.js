@@ -1,6 +1,4 @@
-var btnCopy = document.getElementById('copyButton');
-
-btnCopy.addEventListener('click', function() {
+function clipboardCopy() {
 	var copyText = document.getElementById("email");
 
 	copyText.focus();
@@ -15,4 +13,4 @@ btnCopy.addEventListener('click', function() {
 	} catch (e) {
 		console.log('unable to copy');
 	}
-});
+};
