@@ -1,8 +1,10 @@
 import { Button } from 'react-bootstrap'
+import MyNavbar from './components/Navbar'
 
 const App = () => {
 	return (
 		<div className="App">
+			<MyNavbar />
 			<header className="App-header">
 				<h1>Hello</h1>
 				<Button variant="danger">Hello</Button>
