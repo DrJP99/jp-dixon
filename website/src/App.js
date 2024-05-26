@@ -1,25 +1,18 @@
-import { Button } from 'react-bootstrap'
+import { Route, Routes } from 'react-router-dom'
 import MyNavbar from './components/Navbar'
+import Home from './components/Home'
+import Projects from './components/Projects'
+import Github from './components/Github'
 
 const App = () => {
 	return (
 		<div className="App">
 			<MyNavbar />
-			<header className="App-header">
-				<h1>Hello</h1>
-				<Button variant="danger">Hello</Button>
-				<p>
-					Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
-			</header>
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/projects" element={<Projects />} />
+				<Route path="/github" element={<Github />} />
+			</Routes>
 		</div>
 	)
 }
