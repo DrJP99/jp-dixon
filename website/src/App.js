@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap'
 
-function App() {
+const App = () => {
 	return (
 		<div className="App">
 			<header className="App-header">
