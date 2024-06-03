@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const GithubHeader = ({ user }) => {
 	return (
-		<div className="gh-header">
+		<div className="gh-header mb-4">
 			<Card className="bg-black">
 				<CardBody>
 					<Row className="text-center">
@@ -62,8 +62,37 @@ const GithubHeader = ({ user }) => {
 	)
 }
 
+const GithubRepo = ({ repo }) => {
+	return (
+		<div className="gh-repo">
+			<Card>
+				<CardBody>
+					<h4>
+						<Link to={repo.html_url} target="_blank">
+							{repo.name}
+						</Link>
+					</h4>
+					{repo.language ? (
+						<p>
+							(
+							<span className="text-success">
+								{repo.language}
+							</span>
+							)
+						</p>
+					) : (
+						<></>
+					)}
+					{repo.description ? <p>{repo.description}</p> : <></>}
+				</CardBody>
+			</Card>
+		</div>
+	)
+}
+
 const Github = () => {
 	const [user, setUser] = useState()
+	const [repos, setRepos] = useState()
 
 	useEffect(() => {
 		axios
@@ -71,14 +100,30 @@ const Github = () => {
 			.then((res) => {
 				console.log(res.data)
 				setUser(res.data)
+				axios
+					.get(res.data.repos_url)
+					.then((res) => {
+						setRepos(res.data)
+						console.log(res.data)
+					})
+					.catch((err) => console.error(err.message))
 			})
-			.catch((err) => console.log(err.message))
+			.catch((err) => console.error(err.message))
 	}, [])
 
 	return (
 		<Container>
 			<h1 className="text-danger">My Github</h1>
 			{user ? <GithubHeader user={user} /> : null}
+			{user && repos ? (
+				<div className="row">
+					{repos.map((repo) => (
+						<div className="col-md-4 col-sm-6 col-12 mb-4">
+							<GithubRepo key={repo.id} repo={repo} />
+						</div>
+					))}
+				</div>
+			) : null}
 		</Container>
 	)
 }
